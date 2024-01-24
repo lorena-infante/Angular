@@ -115,8 +115,14 @@ panchis = {
     age: 31,
     hobby: true
 }
-
 losDos = [lorenin,panchis];
-
 console.log(losDos);
-/* Functions, Parameters*/
+/* Functions and types*/
+
+function add1(a:number, b:number){
+    return a+b; //return number type is implicit 
+}
+
+function show(value:any){
+    console.log(value); // returns void. It has no return.
+}

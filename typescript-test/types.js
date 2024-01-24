@@ -74,4 +74,10 @@ panchis = {
 };
 losDos = [lorenin, panchis];
 console.log(losDos);
-/* Functions, Parameters*/
+/* Functions and types*/
+function add1(a, b) {
+    return a + b; //return number type is implicit 
+}
+function show(value) {
+    console.log(value); // returns void. It has no return.
+}
