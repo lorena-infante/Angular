@@ -126,3 +126,68 @@ function add1(a:number, b:number){
 function show(value:any){
     console.log(value); // returns void. It has no return.
 }
+// Generics: type definitions that allow functions, classes, interfaces to have a certain type
+
+function insertAtBeginning<T>(arr:T[], value:T){
+    const newArr = [value,...arr];
+    console.log(newArr);
+    return newArr;
+};
+
+const fruitsArr:string[] =['banana','apple','pear','peach'];
+
+insertAtBeginning(fruitsArr,'orange');
+
+const numbersArr:number[]= [1,2,3,4];
+insertAtBeginning(numbersArr, 0);
+
+/* Classes */
+
+//Long-way
+class Student {
+    firstName:string;
+    lastName:string;
+    age:number;
+    private courses:string[];
+    
+    constructor(first:string, last:string, age:number, courses:string[]){
+        this.firstName = first;
+        this.lastName = last;
+        this.age = age;
+        this.courses = courses;
+    }
+    enrol(courseName:string){
+        this.courses.push(courseName);
+    }
+
+    listCourses(){
+       console.log(this.courses.slice());
+       return this.courses.slice();
+    }
+}
+
+const student = new Student ('Lorena', 'I',28, ['Angular']);
+student.enrol('Javascript');
+student.listCourses();
+console.log(student);
+
+/* Short way */
+
+class Student1 {
+    constructor(public firstName:string, public lastName:string, public age:number, private courses:string[]){}
+    
+    enrol(courseName:string){
+        this.courses.push(courseName);
+    }
+
+    listCourses(){
+        console.log(this.courses.slice());
+        return this.courses.slice();
+    }
+
+}
+
+const student1 = new Student1 ('Fco','Knt', 31, ['Rust','Python']);
+student1.enrol('Data Structures and Algorithms');
+student.listCourses();
+console.log(student1);
