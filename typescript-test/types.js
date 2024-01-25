@@ -144,3 +144,26 @@ var student1 = new Student1('Fco', 'Knt', 31, ['Rust', 'Python']);
 student1.enrol('Data Structures and Algorithms');
 student.listCourses();
 console.log(student1);
+var lore;
+lore = {
+    firstName: 'Lorencia',
+    age: 28,
+    greet: function () {
+        console.log('Hi!');
+    }
+};
+console.log('Interface Lore', lore);
+var Learner = /** @class */ (function () {
+    function Learner() {
+    }
+    return Learner;
+}());
+var learner = new Learner;
+learner = {
+    firstName: 'Lorencia Aprende',
+    age: 28,
+    greet: function () {
+        console.log('Hi!!!!!');
+    }
+};
+console.log('interface Learner', learner);

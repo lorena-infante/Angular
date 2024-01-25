@@ -191,3 +191,40 @@ const student1 = new Student1 ('Fco','Knt', 31, ['Rust','Python']);
 student1.enrol('Data Structures and Algorithms');
 student.listCourses();
 console.log(student1);
+
+// Interfaces
+
+interface Human {
+    firstName:string;
+    age:number;
+    greet:() => void; //here only the structure is built
+}
+
+let lore:Human;
+
+lore = {
+    firstName:'Lorencia',
+    age:28,
+    greet (){
+        console.log('Hi!');
+    }
+}
+
+console.log('Interface Lore', lore);
+class Learner implements Human {
+    firstName: string;
+    age: number;
+    greet: () => void;
+}
+
+let learner = new Learner;
+
+learner = {
+    firstName:'Lorencia Aprende',
+    age: 28,
+    greet (){
+        console.log('Hi!!!!!');
+    }
+}
+
+console.log('interface Learner', learner);
