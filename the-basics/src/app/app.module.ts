@@ -3,11 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { ServerComponent } from './server/server.component';
+import { LoreComponent } from './lore/lore.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ServerComponent
+    ServerComponent,
+    LoreComponent
   ],
   imports: [
     BrowserModule
