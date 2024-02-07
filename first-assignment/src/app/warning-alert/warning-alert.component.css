@@ -1,7 +1,8 @@
 .warning_bg {
-    background-color: steelblue;
+    background-color: #FB9A50;
     color: white;
     font-weight: 500;
     padding: 0.5rem;
+    margin-top: 1rem;
     text-align: center;
 }
