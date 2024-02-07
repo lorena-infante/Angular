@@ -1,0 +1,9 @@
+.alerts_container {
+    background-color: cornflowerblue;
+    height: 100%;
+    width: 100%;
+    padding: 2rem;
+}
+.alerts_text{
+    color:white;
+}
