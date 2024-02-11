@@ -2,10 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-servers',
-  template: `<p class="h1 text-success">servers works!</p>
-  <app-server></app-server>
-  <app-server></app-server>
-  <lore-app></lore-app>`,
+  templateUrl: './servers.component.html',
   //external file styles
   styleUrls: ['./servers.component.css']
   // inline styles
@@ -16,5 +13,11 @@ import { Component } from '@angular/core';
 }`] */
 })
 export class ServersComponent {
+  allowNewServer = false;
 
+  constructor(){
+    setTimeout(() => {
+      this.allowNewServer = true;
+    }, 2000);
+  }
 }
