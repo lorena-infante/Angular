@@ -1,12 +1,20 @@
 <div class="container">
     <div class="row">
         <div class="col-xs-12">
-            <label>Server Name</label>
+            <!-- <label>Server Name</label>
             <br>
             <input 
             type="text"
             class="col-12"
             (input)= "onUpdatingServerName($event)">
+            <p>{{ serverName }}</p>
+            <br> -->
+            <label>Server Name</label>
+            <br>
+            <input 
+            type="text"
+            class="col-12"
+            [(ngModel)]="serverName">
             <p>{{ serverName }}</p>
             <br>
             <button 

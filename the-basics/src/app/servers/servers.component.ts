@@ -15,7 +15,7 @@ import { Component } from '@angular/core';
 export class ServersComponent {
   allowNewServer:boolean = false;
   serverCreationStatus:string = 'No server was chosen!';
-  serverName:string= '';
+  serverName:string= 'Holas';
 
   constructor(){
     setTimeout(() => {
