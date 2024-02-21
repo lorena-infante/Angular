@@ -1,0 +1,15 @@
+<form action="">
+    <div class="form-group">
+        <label for="name">Username</label>
+        <br>
+        <input name="name" [(ngModel)]="userName" (input)="toggleIsUserNameEmpty()">
+        <br>
+        <p>{{userName}}</p>
+    </div>
+    <button type="submit" 
+    class="btn btn-primary" 
+    [disabled]="isUserNameEmpty" 
+    (click)="onResetName()">
+        Reset name
+    </button>
+</form>
