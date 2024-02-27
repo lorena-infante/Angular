@@ -26,7 +26,7 @@ export class ServersComponent {
 
   onCreateServer(){
     this.serverCreated = true;
-    this.serverCreationStatus = `Server ${this.serverName} created!`;
+    this.serverCreationStatus = `Server ${this.serverName} created! 😀`;
   }
   onUpdatingServerName(event:Event){
     this.serverName =(<HTMLInputElement>event.target).value;

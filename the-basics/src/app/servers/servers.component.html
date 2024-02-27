@@ -13,8 +13,13 @@
             [disabled]="!allowNewServer"
             (click)="onCreateServer()">Add server</button>
             <!-- <h4 class="text-primary">{{serverCreationStatus}}</h4> -->
-            <h4 class="text-primary" *ngIf="serverCreated">{{serverCreationStatus}}</h4>
-            <p class="h1 text-success">servers works!</p>
+            <h4 class="text-primary" *ngIf="serverCreated; else elseBlock"> 
+                <!--also works with *ngIf= "!serverCreated"-->
+                {{serverCreationStatus}}
+            </h4>
+            <ng-template #elseBlock>
+                <h4 class="text-danger">Server not found 😔</h4>
+            </ng-template>
             <app-server></app-server>
             <app-server></app-server>
             <lore-app></lore-app>
