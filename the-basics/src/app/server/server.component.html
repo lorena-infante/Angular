@@ -1,2 +1,7 @@
 <h3>This is server.component.html 👋🏻🎉👨🏻‍💻</h3>
-<p [ngStyle]="{'background-color': getColor()}">The Server with ID: {{ serverID }} has an status of {{ getServerStatus() }}</p>
+<p [ngStyle]="{'background-color': getColor()}" 
+   [ngClass]="{'online': serverStatus === 'online', 
+   'offline': serverStatus === 'offline'}">
+    The Server with ID: {{ serverID }}
+    has an status of {{ getServerStatus() }}
+</p>
