@@ -20,8 +20,7 @@
             <ng-template #elseBlock>
                 <h4 class="text-danger">Server not found 😔</h4>
             </ng-template>
-            <app-server></app-server>
-            <app-server></app-server>
+            <app-server *ngFor ="let server of servers"></app-server>
             <lore-app></lore-app>
         </div>
     </div>
