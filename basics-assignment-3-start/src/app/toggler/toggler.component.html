@@ -1,0 +1,22 @@
+<div class="container">
+    <button class="btn btn-primary" (click)="toggleText()">Display Details</button>
+    <p *ngIf="btnClicked">{{toggledText}}</p>
+    <div class="col-12 text-center">
+        <h3><strong>Click Logs</strong></h3>
+        <ul class="toggler_list">
+            <!-- Previous versions 
+                <li *ngFor="let click of clicksArr">{{click}} Clicks Pressed</li>
+             -->
+            <!-- Angular 17 notation-->
+            @for(click of clicksArr; track click){
+                @if(click <= 4){
+                    <li> {{click}} Clicks Pressed </li>
+                } @else if(click >= 5) {
+                    <li [ngStyle]="{'background-color': '#0A2463'}" [ngClass]="'text-white'">
+                    {{click}} Clicks Pressed </li>
+                    }
+                }
+
+        </ul>
+    </div>
+</div>

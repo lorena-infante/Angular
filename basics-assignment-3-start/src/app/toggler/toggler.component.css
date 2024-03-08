@@ -1,0 +1,23 @@
+p {
+    padding: 3rem;
+    margin: 2rem;
+    background-color: #2CA58D;
+    color: white;
+    font-weight: 500;
+}
+
+.toggler_list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    & li {
+        margin: 1rem;
+        padding: 0.5rem;
+        font-size: 1.5rem;
+    }
+    & .text-white {
+        color:white;
+        font-weight: bold;
+    }
+}

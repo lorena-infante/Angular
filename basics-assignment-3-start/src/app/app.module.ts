@@ -4,10 +4,12 @@ import { FormsModule } from '@angular/forms';
 
 
 import { AppComponent } from './app.component';
+import { TogglerComponent } from './toggler/toggler.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TogglerComponent
   ],
   imports: [
     BrowserModule,
