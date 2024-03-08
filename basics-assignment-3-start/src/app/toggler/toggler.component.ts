@@ -10,14 +10,16 @@ import { Component } from '@angular/core';
 export class TogglerComponent {
     toggledText:string = '';
     btnClicked:boolean = false;
-    clicksArr:number[] = [];
+    clicksArr = [];
     counter:number = 1;
 
     toggleText(){
         this.btnClicked = !this.btnClicked;
         this.toggledText ='\'Cause when I am weak, then I am strong 💪🏻';
+        //this.clicksArr.push(new Date());
         this.clicksArr.push(this.counter++);
         return this.counter;
+
     }
 
 }

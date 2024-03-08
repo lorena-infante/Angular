@@ -4,10 +4,14 @@
     <div class="col-12 text-center">
         <h3><strong>Click Logs</strong></h3>
         <ul class="toggler_list">
-            <!-- Previous versions 
-                <li *ngFor="let click of clicksArr">{{click}} Clicks Pressed</li>
+            <!-- Previous versions (and Maximilian's solution)
+                <div *ngFor="let click of clicksArr; let i = index"
+                [ngStyle]="{backgroundColor : i >= 4 = 'blue' : 'transparent'}"
+                [ngClass]="{'text-white': i <= 4}">
+                {{click}} Clicks Pressed</div>
+
              -->
-            <!-- Angular 17 notation-->
+            <!-- Angular 17 notation without index-->
             @for(click of clicksArr; track click){
                 @if(click <= 4){
                     <li> {{click}} Clicks Pressed </li>
