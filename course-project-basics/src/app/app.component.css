@@ -1,0 +1,6 @@
+/*color palette: https://coolors.co/0a2342-2ca58d-84bc9c-fffdf7-f46197*/
+.body-content {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
